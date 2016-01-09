@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT dota ( hero, types, positons )>
+
+    <!ELEMENT hero ( hero+ )>
+        <!ELEMENT  heros ( name, image?, magic, comboHero?, basicstats )>
+            <!ATTLIST  hero  id        ID     #REQUIRED 
+                             type      IDREFS #REQUIRED
+                             position  IDREFS #REQUIRED>
+            <!ELEMENT name ( #PCDATA )>
+            <!ELEMENT image ( #PCDATA)>
+            <!ELEMENT magic (firstMagic, secondMagic, thirdMagic, ultimateMagic )>
+                <!ELEMENT firstMagic ( #PCDATA )>
+                <!ELEMENT secondMagic ( #PCDATA)>
+                <!ELEMENT thirdMagic ( #PCDATA)>
+                <!ELEMENT ultimateMagic ( #PCDATA)>
+            <!ELEMENT combo (#PCDATA)>
+            <!ELEMENT basicStats (Agility, Intelligence, Strength, Armor, Damage, AttackSpeed)>
+                <!ELEMENT Agility ( #PCDATA) >
+                <!ELEMENT Intelligence ( #PCDATA) >
+                <!ELEMENT Strength ( #PCDATA) >
+                <!ELEMENT Armor ( #PCDATA) >
+                <!ELEMENT Damage ( #PCDATA) >
+                <!ELEMENT AttackSpeed ( #PCDATA) >
+        <!ELEMENT types ( type+ )>
+            <!ELEMENT type (#PCDATA) >
+                <!ATTLIST type typeID  ID #REQUIRED >
+        <!ELEMENT positions (position+ )>
+            <!ELEMENT  position (#PCDATA) >
+                <!ATTLIST position postionID ID #REQUIRED >
+            
